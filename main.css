@@ -1,0 +1,241 @@
+body{
+    padding:0;
+    margin:0;
+}
+body, input, button{
+    font-family: 'Roboto', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+.addarea{
+    text-decoration: none;
+}
+h2 {
+    text-align: center;
+    top: 0;
+    position: relative;
+}
+.container{
+    margin: 0 0 100px 0;
+    width: 80%;
+    left: 10%;
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    position: absolute;
+    top: 100px;
+    background-color: #F1F1F1;
+    box-shadow: 1px 1px 5px 2px #b3b3b3;
+}
+.addarea .fa{
+    text-align: center;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    top: 40px;
+    font-size: 60px !important;
+}
+.header{
+    background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+    width:33.3%;
+    height:150px;
+    float: left;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border:1px solid #F1F1F1;
+    cursor:pointer;
+    list-style: none;
+}
+.header h1{
+    position: relative;
+    margin: auto;
+    text-align:center;
+    top:50px;
+    font-size: 2em;
+    font-weight: 900;
+    color:#FFF;
+    text-shadow: 1px 1px #333;
+}
+.container input{
+    width: calc(100% - 40px);
+    margin:20px;
+    height:50px;
+    float: left;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 18px;
+    outline:none;
+    border:1px solid #f1f1f1;
+    border-radius: 25px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+.container button{
+    width:50px;
+    height:50px;
+    position: absolute;
+    top:170px;
+    right:15px;
+    z-index: 29;
+    border-radius: 25px;
+    background: #333;
+    border: 0px;
+    cursor: pointer;
+}
+.tab1{
+    width: 50%;
+    height:50px;
+    background: #e3e3e3;
+    color:#000;
+    float:left;
+    cursor: pointer;
+    transition: 1s ease;
+    border-right: 1px solid black;
+}
+.tab1:hover{
+   background-color: #a5a5a5;
+}
+.tab2{
+    width: 50%;
+    height:50px;
+    background: #e3e3e3;
+    color:#000;
+    float:right;
+    cursor: pointer;
+    transition: 1s ease;
+}
+.tab2:hover{
+   background-color: #a5a5a5;
+}
+.inner button{
+    width:50px;
+    height:50px;
+    position: absolute;
+    top:0;
+    right:15px;
+    z-index: 29;
+    border-radius: 25px;
+    background: #333;
+    border: 0px;
+    cursor: pointer;
+}
+.fa{
+    color:#fff;
+    font-size:1.8em !important;
+    transition: 1s width ease;
+}
+.inner .fa{
+    color:#4CAF50;
+    font-size:1.8em !important;
+    transition: 1s width ease;  
+}
+.inner{
+    width:100%;
+    float: left;
+    padding:15px;
+}
+ul.todo{
+    width:100%;
+    float:left;
+}
+ul#todo {
+    padding: 10px !important;
+}
+ul.todo li{
+    width:100%;
+    min-height:50px;
+    float:left;
+    font-size: 14px;
+    font-weight: 500;
+    color:#333;
+    line-height: 22px;
+
+    position: relative;
+    list-style: none;
+    background:#fff;
+    box-shadow:0px 2px 4px rgba(44, 62, 80,0.10);
+    margin: 0 0 10px 0;
+    padding: 14px 100px 14px 14px;
+}
+ul.todo li:last-child{
+    margin:0;
+}
+ul.todo li .buttons{
+    width:100px;
+    height:50px;
+    position: absolute;
+    top: 0;
+    right:0;
+}
+ul.todo li .buttons button{
+    width:50px;
+    height:50px;
+    float:left;
+    position: relative;
+    background: none;
+    box-shadow:none;
+    border:0;
+    box-sizing: border-box;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+ul.todo li .buttons button:last-of-type:before{
+    content: '';
+    widows: 1px;
+    height:30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: #edf0f1;
+}
+ul.todo li .buttons button.remove .fa{
+    color:gray;
+    cursor: pointer;
+}
+ul.todo li .buttons button.remove .fa:hover{
+    color:red;
+    cursor: pointer;
+}
+ul.todo li .buttons button.complate .fa:hover{
+    color:green;
+    cursor: pointer;
+}
+ul.todo li .buttons .fa{
+    font-size: 25px;
+}
+ul.todo#complated{
+    padding: 10px !important;
+    opacity: 0.5;
+    position: relative;
+}
+ul.todo#complated li{
+    text-decoration: line-through;
+    color:#e53935;
+}
+ul.todo#todo:empty:after{
+    content:'You have nothing to-do!';
+    margin:15px 0 0 0;
+}
+ul.todo#complated:empty:after{
+    content:'You have yet to complete any tasks.';
+}
+ul.todo#todo:after,
+ul.todo#complated:after{
+    width:100%;
+    display: block;
+    text-align: center;
+    font-size:14px;
+    color:#333;
+}

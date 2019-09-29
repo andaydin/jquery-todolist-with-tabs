@@ -1,18 +1,48 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>To do List</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
+    <div class="container">
+        
+        <li class="header">
+            <a href="#addarea" class="addarea active"><i class="fa fa-plus"></i></a>
+        </li>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+        <li class="header">
+            <a href="#listarea" class="addarea"><i class="fa fa-list-ul"></i></a>
+        </li>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+        <li class="header">
+            <a href="#complateds" class="addarea"><i class="fa fa-check"></i></a>
+        </li>
 
+        <div id="addarea" style="display: block;">
+            <input type="text" class="user" id="item"  placeholder="Enter an Activity..." required>
+            <button id="add"><i class="fa fa-plus"></i></button>
+        </div>
+
+        <div id="listarea" style="display: none;">
+            <div class="inner" id="inner">
+                <ul id="todo" class="todo"></ul>
+            </div>
+        </div>
+
+        <div id="complateds" style="display: none;">
+            <div class="inner" id="inner">
+                <ul class="todo" id="complated"></ul>
+            </div>
+        </div>
+
+    </div>
+    <script src='main.js'></script> 
 </body>
 </html>
